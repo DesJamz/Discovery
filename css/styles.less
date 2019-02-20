@@ -18,15 +18,21 @@ h1, h2, h3, h4, h5, h6, p, a {
   display: block;
   width: 100%;
   height: 1080px;
+  @media (max-width: 576px) {
+    height: auto;
+  }
 }
 .header {
   position: relative;
   margin: 0;
   padding: 0;
-  background-image:url('file:///C:/wamp/www/discovery-template-build/images/header-bg.jpg');
+  background-image:url('file:///Users/laurenramsay/Desktop/Discovery-site-build/images/header-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  @media (max-width: 576px) {
+    height: 100vh;
+  }
   .logo-wrapper {
     position: absolute;
     top: 15px;
@@ -42,18 +48,39 @@ h1, h2, h3, h4, h5, h6, p, a {
     top: 15px;
     right: 30px;
     z-index: 1000;
-    nav {
+    #menu-btn {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+        float: right;
+      }
+      img {
+        width: 35px;
+      }
+    }
+    #nav {
       position: relative;
       display: block;
+      @media (max-width: 768px) {
+        float: right;
+        display: none;
+        margin-top: 35px;
+        margin-right: -40px;
+      }
       ul {
         margin: 0;
         padding: 0;
         li {
           display: inline-block;
           list-style: none;
-          margin: 0 10px;
-          font-size: 12px;
+          margin: 2px 5px;
+          font-size: 14px;
           text-transform: uppercase;
+          @media (max-width: 768px) {
+            display: block;
+            float: right;
+            clear: both;
+          }
           &:hover {
             border-bottom: 1px solid #fff;
           }
@@ -71,12 +98,18 @@ h1, h2, h3, h4, h5, h6, p, a {
     font-weight: 700;
     margin: 0;
     padding: 0;
+    @media (max-width: 576px) {
+      font-size: 65px;
+    }
   }
   h4 {
     font-size: 38px;
     font-weight: 100;
     color: #fff;
     margin-bottom: 30px;
+    @media (max-width: 576px) {
+      font-size: 30px;
+    }
     span {
       color: #e96b6b;
     }
@@ -101,30 +134,45 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 .about-us {
   position: relative;
-  background-image: url('file:///C:/wamp/www/discovery-template-build/images/about-us-bg.jpg');
+  background-image: url('file:///Users/laurenramsay/Desktop/Discovery-site-build/images/about-us-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   .text-wrapper {
     text-align: left;
     padding-left: 30px;
+    @media (max-width: 576px) {
+      padding: 15px 5px;
+    }
     h5 {
       font-size: 35px;
       font-weight: 700;
     }
     h1 {
-      font-size: 160px;
+      font-size: 130px;
       font-weight: 700;
+      @media (max-width: 576px) {
+        font-size: 70px;
+      }
     }
     p {
-      font-size: 24px;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
+  .img-wrapper {
+    img {
+      width: 90%;
+      @media (max-width: 576px) {
+        width: 80%;
+      }
     }
   }
 }
 
 .app {
   position: relative;
-  background-image: url('file:///C:/wamp/www/discovery-template-build/images/app-bg.jpg');
+  background-image: url('file:///Users/laurenramsay/Desktop/Discovery-site-build/images/app-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -143,7 +191,7 @@ h1, h2, h3, h4, h5, h6, p, a {
     }
     p {
       font-weight: 100;
-      font-size: 12px;
+      font-size: 14px;
     }
   }
   .mockup-wrapper {
@@ -183,4 +231,21 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .h-1080  {
   height: 1080px;
+
+}
+
+@media (max-width: 576px) {
+
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+
+}
+
+@media (min-width:992px) and (max-width: 1199px) {
+
 }
